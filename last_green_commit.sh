@@ -4,6 +4,7 @@ pushd ${DIRNAME}
 header="PRIVATE-TOKEN: ${PRIVATE_TOKEN}"
 urlToCall="${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/pipelines?status=success&ref=${CI_COMMIT_REF_NAME}"
 echo "URL to call is: ${urlToCall}"
+echo "Heads is: ${header}
 curl --header "${header}" -s "${urlToCall}" -o tmp
 echo "pipelines statuses are:"
 head tmp
