@@ -1,7 +1,7 @@
 @echo off
 setlocal
 pushd %~dp0
-set header="PRIVATE_TOKEN: %PRIVATE_TOKEN%"
+set header="PRIVATE-TOKEN: %PRIVATE_TOKEN%"
 echo header is '%header%'
 set url="%CI_SERVER_URL%/api/v4/projects/%CI_PROJECT_ID%/pipelines?status=success&ref=%CI_COMMIT_REF_NAME%"
 echo url is '%url%'
